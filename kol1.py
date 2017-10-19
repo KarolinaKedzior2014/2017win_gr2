@@ -13,3 +13,52 @@
 #Do your best, show off with good, clean, well structured code - this is more important than number of features.
 #After you finish, be sure to UPLOAD this (add, commit, push) to the remote repository.
 #Good Luck
+
+
+#!/usr/bin/env python2.7
+import random 
+import math
+import numpy as np
+from time import time
+
+current_orientation = 50.0 
+perfect_tilt = 90.0
+
+
+angles = range(0,360)
+
+def StepCorrection(orientation, step_correction):
+	orientation = orientation % 360 #just in case
+	if orientation < perfect_tilt:
+		orientation = orientation + step_correction
+	elif orientation > perfect_tilt:
+		orientation = orientation - step_correction
+	return orientation
+
+print('a')
+	
+
+while True:
+	#start	
+	#current_orientation = np.random.normal( to future
+	current_orientation = current_orientation + random.uniform(0,1) - 0.5
+	print('Current Orientation', current_orientation)
+	current_orientation = StepCorrection(current_orientation, 0.6)
+	print('Current Orientation after correction/n/n', current_orientation)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
