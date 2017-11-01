@@ -15,6 +15,7 @@
 #Good Luck
 
 
+<<<<<<< HEAD
 import sys
 import numpy as np
 import time
@@ -78,6 +79,44 @@ if __name__ == "__main__":
 			print('Parameters changed sucesssfuly!\n')
 		elif(option == '4'):
 			break
+=======
+#!/usr/bin/env python2.7
+import random 
+import math
+import numpy as np
+from time import time
+
+current_orientation = 50.0 
+perfect_tilt = 90.0
+
+
+angles = range(0,360)
+
+def StepCorrection(orientation, step_correction):
+	orientation = orientation % 360 #just in case
+	if orientation < perfect_tilt:
+		orientation = orientation + step_correction
+	elif orientation > perfect_tilt:
+		orientation = orientation - step_correction
+	return orientation
+
+print('a')
+	
+
+while True:
+	#start	
+	#current_orientation = np.random.normal( to future
+	current_orientation = current_orientation + random.uniform(0,1) - 0.5
+	print('Current Orientation', current_orientation)
+	current_orientation = StepCorrection(current_orientation, 0.6)
+	print('Current Orientation after correction/n/n', current_orientation)
+
+
+
+
+
+
+>>>>>>> a9c03ca04e2fe9afd9540ad31c0388974e2ae1e6
 
 
 
