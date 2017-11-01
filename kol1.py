@@ -19,7 +19,7 @@ import sys
 import numpy as np
 import time
 
-std_deviation =  0.5
+std_deviation =  0.1
 def gaussian_turbulation(orientation):
 	return np.random.normal(orientation, std_deviation)
 
@@ -46,7 +46,7 @@ class FlightSimulator:
 		
 if __name__ == "__main__":
 
-	flight_sim = FlightSimulator( 20.0 ,0.1, 90.0)
+	flight_sim = FlightSimulator( 20.0 ,0.2, 90.0)
 	
 	while True:
 		print('''Choose option:
@@ -78,19 +78,6 @@ if __name__ == "__main__":
 			print('Parameters changed sucesssfuly!\n')
 		elif(option == '4'):
 			break
-
-## Darnise
-
-
-
-'''
-dfadfda
-fad
-fda
-sf
-adf
-af
-'''
 
 
 
